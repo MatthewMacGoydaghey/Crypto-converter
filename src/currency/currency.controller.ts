@@ -2,8 +2,9 @@ import { Controller, Get, Query, UsePipes, ValidationPipe } from '@nestjs/common
 import { CurrencyService } from './currency.service';
 import { CurrencyParams } from './DTO/currencyParamsInt';
 import { QueryParamsDTO } from './DTO/queryParamsDTO';
-import { ApiOperation, ApiResponse} from '@nestjs/swagger';
+import { ApiOperation, ApiResponse, ApiTags} from '@nestjs/swagger';
 
+@ApiTags('Currency')
 @Controller('currency')
 export class CurrencyController {
   constructor(
